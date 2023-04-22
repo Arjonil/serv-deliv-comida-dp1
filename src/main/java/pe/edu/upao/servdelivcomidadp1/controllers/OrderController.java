@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upao.servdelivcomidadp1.services.OrderService;
 
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +21,7 @@ public class OrderController {
 
     @GetMapping("/orders")
     public ResponseEntity<List<Order>> getAllOrders(){
-
+        System.out.println("jkdnbcwiednclw");
         return ResponseEntity.ok(this.orderService.getAllOrders());
     }
 

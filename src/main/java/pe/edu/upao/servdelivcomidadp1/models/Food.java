@@ -49,8 +49,8 @@ public class Food {
 
     @Override
     public String toString() {
-        return  "\n\u001B[32mNombre: \u001B[33m" + name.toUpperCase() + "\n" +
+        return  "\n\u001B[32mNombre: \u001B[36m" + name.toUpperCase() + "\n" +
                 "\u001B[32mDescripcion: \n\u001B[33m" + description + "\n" +
-                "\u001B[32mPrecio: \u001B[33m" + price+"\u001B[0m\n";
+                "\u001B[32mPrecio: \u001B[31m" + price+"\u001B[0m\n";
     }
 }

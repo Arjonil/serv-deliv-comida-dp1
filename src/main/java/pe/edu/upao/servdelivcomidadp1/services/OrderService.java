@@ -11,30 +11,30 @@ import pe.edu.upao.servdelivcomidadp1.models.Order;
 
 @Service
 public class OrderService {
-    private List<Order> Orden;
+    private List<Order> orderList;
 
     public OrderService() {
-        this.Orden = new ArrayList<>();
+        this.orderList = new ArrayList<>();
     }
 
     public List<Order> getAllOrders(){
-        return this.Orden;
+        return this.orderList;
     }
 
-    public Optional<Order> getOrderById(String Id){
-        return this.Orden.stream().filter(Orden -> Orden.getId().equals(Id)).findFirst();
+    public Optional<Order> getOrderById(String id){
+        return this.orderList.stream().filter(orden -> orden.getId().equals(id)).findFirst();
     }
 
     public List<Order> getOrderByCustName(String custName){
-        return this.Orden.stream().filter(Orden -> Orden.getCustomerName().equalsIgnoreCase(custName)).collect(Collectors.toList());
+        return this.orderList.stream().filter(Orden -> Orden.getCustomerName().equalsIgnoreCase(custName)).collect(Collectors.toList());
     }
 
     public void addOrder(Order orden){
-        this.Orden.add(orden);
+        this.orderList.add(orden);
     }
 
     public boolean removeOrderById(String Id){
-        return this.Orden.removeIf(Orden -> Orden.getId().equals(Id));
+        return this.orderList.removeIf(Orden -> Orden.getId().equals(Id));
     }
 
     public void service(Order servicio){
